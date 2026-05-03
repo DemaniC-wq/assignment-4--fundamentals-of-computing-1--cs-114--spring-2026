@@ -8,4 +8,11 @@ void setup() {
 }
 
 void draw() {
+  background(255);
+  drawBoard();
+  drawMarks();
+}
+
+void keyPressed() {
+  handlePlayerInput(key);
 }
