@@ -33,3 +33,16 @@ void drawX(int x, int y) {
   line(x + 20, y + 20, x + CELL_SIZE - 20, y + CELL_SIZE - 20);
   line(x + CELL_SIZE - 20, y + 20, x + 20, y + CELL_SIZE - 20);
 }
+
+void drawO(int x, int y) {
+  stroke(0, 0, 255);
+  strokeWeight(4);
+  noFill();
+
+  ellipse(
+    x + CELL_SIZE / 2,
+    y + CELL_SIZE / 2,
+    CELL_SIZE - 40,
+    CELL_SIZE - 40
+  );
+}
