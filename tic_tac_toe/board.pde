@@ -47,3 +47,13 @@ void handlePlayerInput(char key) {
     gameOver = true;
     return;
   }
+}
+
+void computerMove() {
+  for (int i = 0; i < board.length; i++) {
+    if (board[i] == EMPTY) {
+      board[i] = COMPUTER;
+      break;
+    }
+  }
+}
