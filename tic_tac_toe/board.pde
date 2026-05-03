@@ -16,3 +16,18 @@ void handlePlayerInput(char key) {
     println("Invalid input! Enter 0–8.");
     return;
   }
+
+  int index = key - '0';
+
+  if (board[index] != EMPTY) {
+    println("That square is already taken.");
+    return;
+  }
+
+  board[index] = PLAYER;
+
+  if (checkWin(PLAYER)) {
+    println("You win!");
+    gameOver = true;
+    return;
+  }
