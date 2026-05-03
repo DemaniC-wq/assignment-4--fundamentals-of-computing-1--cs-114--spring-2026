@@ -31,3 +31,19 @@ void handlePlayerInput(char key) {
     gameOver = true;
     return;
   }
+
+  println("Game still in play.");
+
+  computerMove();
+
+  if (checkWin(COMPUTER)) {
+    println("Computer wins.");
+    gameOver = true;
+    return;
+  }
+
+  if (boardFull()) {
+    println("No one has won.");
+    gameOver = true;
+    return;
+  }
