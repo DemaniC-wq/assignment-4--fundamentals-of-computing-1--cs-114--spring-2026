@@ -71,3 +71,13 @@ boolean checkWin(char p) {
     {0,3,6},{1,4,7},{2,5,8},
     {0,4,8},{2,4,6}
   };
+
+  for (int i = 0; i < w.length; i++) {
+    if (board[w[i][0]] == p &&
+        board[w[i][1]] == p &&
+        board[w[i][2]] == p) {
+      return true;
+    }
+  }
+  return false;
+}
