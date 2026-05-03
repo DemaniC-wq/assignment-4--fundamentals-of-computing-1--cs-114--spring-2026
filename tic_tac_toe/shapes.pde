@@ -25,3 +25,11 @@ void drawMarks() {
     }
   }
 }
+
+void drawX(int x, int y) {
+  stroke(255, 0, 0);
+  strokeWeight(4);
+
+  line(x + 20, y + 20, x + CELL_SIZE - 20, y + CELL_SIZE - 20);
+  line(x + CELL_SIZE - 20, y + 20, x + 20, y + CELL_SIZE - 20);
+}
